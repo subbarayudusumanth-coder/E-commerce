@@ -59,6 +59,32 @@ def view_products():
     for p in products:
         print("ID:",p[0],"Name:",p[1],"Price:",p[2],"Stock:",p[3])
 
+# ---------------- SEARCH PRODUCT ----------------    
+    
+def search_product():
+
+    keyword = input("Enter Product Name To Search: ")
+
+    query = """
+    SELECT * FROM products
+    WHERE product_name LIKE %s
+    """
+
+    cursor.execute(query, ("%" + keyword + "%",))
+
+    products = cursor.fetchall()
+
+    if products:
+
+        print("\nSearch Results\n")
+
+        for p in products:
+            print("ID:", p[0], "Name:", p[1],
+                  "Price:", p[2], "Stock:", p[3])
+
+    else:
+        print("No Products Found")
+
 
 # ---------------- ADD TO CART ----------------
 
@@ -237,12 +263,13 @@ while True:
 
                 print("\n----- USER MENU -----")
                 print("1 View Products")
-                print("2 Add To Cart")
-                print("3 View Cart")
-                print("4 Place Order")
-                print("5 Payment")
-                print("6 Order History")
-                print("7 Logout")
+                print("2 Search Products")
+                print("3 Add To Cart")
+                print("4 View Cart")
+                print("5 Place Order")
+                print("6 Payment")
+                print("7 Order History")
+                print("8 Logout")
 
                 ch = input("Enter Choice: ")
 
@@ -250,14 +277,17 @@ while True:
                     view_products()
 
                 elif ch == "2":
-                    add_to_cart(user_id)
+                    search_product()
 
                 elif ch == "3":
-                    view_cart(user_id)
+                    add_to_cart(user_id)
 
                 elif ch == "4":
-                    total = place_order(user_id)
+                    view_cart(user_id)
+
                 elif ch == "5":
+                    total = place_order(user_id)
+                elif ch == "6":
                  if total > 0:
                   make_payment(user_id,total)
                   move_to_history(user_id)
@@ -269,10 +299,10 @@ while True:
                 #     make_payment(user_id,total)
                 #     move_to_history(user_id)
 
-                elif ch == "6":
+                elif ch == "7":
                     view_order_history(user_id)
 
-                elif ch == "7":
+                elif ch == "8":
                     print("Logged out")
                     break
 
