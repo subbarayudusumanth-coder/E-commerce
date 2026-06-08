@@ -1,23 +1,40 @@
 Online Shopping System (Python + MySQL)
-A console-based backend Online Shopping System developed using Python and MySQL.
+Online Shopping System is a console-based e-commerce application developed using Python and MySQL. The system enables users to register, log in securely, browse products, search for items, manage shopping carts, place orders, and view order history. It also includes inventory management and password security using SHA-256 hashing.
 
 Features
-User Registration
-User Login Authentication
-Password Hashing using SHA-256
-View Products
-search products
-Add Products to Cart
-View Cart
-Remove From Cart
-Place Orders
-Payment System
-Order History
-Stock Management
-Technologies Used
+Feature	Description
+User Registration	Allows new users to create an account
+User Login	Authenticates users using username and password 
+View Products	Displays all available products
+Search Products	Enables users to search products by name
+Add to Cart	Adds selected products to the shopping cart
+View Cart	Displays products added to the cart
+Remove from Cart	Removes products from the cart
+Payment System	Processes payments for placed orders
+Place Orders	Allows users to confirm and place orders
+Order History	Displays previously placed orders
+Stock Management	Updates and maintains product inventory
+Logout	Safely logs out the current user
+Database Design
+The application uses MySQL as the backend database and consists of the following tables:
+
+Table Name	Purpose
+users	Stores user account information and hashed passwords
+products	Stores product details such as name, price, stock, and category
+cart	Stores products added to a user's shopping cart
+orders	Stores order information and order status
+payments	Stores payment details and transaction records
+Database Relationships
+One user can place multiple orders.
+One user can have multiple cart items.
+One order can contain multiple products.
+Products are linked to inventory stock management.
+Payments are associated with placed orders.
+Tools & Technologies Used
 Python
 MySQL
 SQL
+Git
 GitHub
 Project Structure
 Online-shop-Project
@@ -78,4 +95,10 @@ Exit
 ![Exit](Project screenshots/Exit.png)
 
 Author
-Developed using Python and MySQL as a backend project.
+Sumanth
+
+AIML Student | Python Developer | Aspiring Software Engineer
+
+GitHub: https://github.com/subbarayudusumanth-coder
+
+LinkedIn:https://www.linkedin.com/in/sumanth-thurpunati-a2048b346/
