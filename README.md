@@ -8,13 +8,10 @@ Online Shopping System is a console-based e-commerce application developed using
 |----------|-------------|
 | User Registration | Allows new users to create an account |
 | User Login | Authenticates users using username and password |
-| Password Hashing | Secures passwords using SHA-256 hashing |
-| Admin Login | Authenticates admin using secure credentials |
 | View Products | Displays all available products |
 | Search Products | Enables users to search products by name |
 | Add to Cart | Adds selected products to the shopping cart |
 | View Cart | Displays products added to the cart |
-| Remove from Cart | Removes products from the cart |
 | Payment System | Processes payments for placed orders |
 | Place Orders | Allows users to confirm and place orders |
 | Order History | Displays previously placed orders |
@@ -95,9 +92,6 @@ python main.py
 
 ### View Cart
 ![View Cart](Project screenshots/View_cart.png)
-
-### Remove From Cart
-![Remove From Cart](Project screenshots/Remove_From_cart.png)
 
 ### Payment
 ![Payment](Project screenshots/Payment.png)
