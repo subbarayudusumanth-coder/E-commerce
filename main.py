@@ -45,8 +45,19 @@ def login():
     else:
         print("Invalid Login")
         return None
+#------------------ ADMIN LOGIN ----------------
 
+def admin_login():
+    username = input("Enter Admin Username: ")
+    password = input("Enter Admin Password: ")
 
+    if username == "admin" and password == "admin123":
+        print("Admin Login Successful")
+        return True
+    else:
+        print("Invalid Admin Credentials")
+        return False
+    
 # ---------------- VIEW PRODUCTS ----------------
 
 def view_products():
@@ -245,7 +256,8 @@ while True:
     print("\n===== ONLINE SHOPPING SYSTEM =====")
     print("1 Register")
     print("2 Login")
-    print("3 Exit")
+    print("3 ADMIN LOGIN")
+    print("4 EXIT")
 
     choice = input("Enter Choice: ")
 
@@ -305,7 +317,22 @@ while True:
                 elif ch == "8":
                     print("Logged out")
                     break
-
     elif choice == "3":
+
+      if admin_login():
+
+        while True:
+
+            print("\n----- ADMIN MENU -----")
+            print("1 View Products")
+            print("2 LOGOUT")
+            ch=input("Enter choice:")
+            if ch == "1":
+                view_products()
+                
+            elif ch == "2":
+                break
+    elif choice == "4":
         print("Thank You")
         break
+ 
