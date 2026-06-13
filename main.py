@@ -57,6 +57,24 @@ def admin_login():
     else:
         print("Invalid Admin Credentials")
         return False
+
+# ---------------- ADD PRODUCT ----------------
+        
+def add_product():
+
+    name = input("Enter Product Name: ")
+    price = float(input("Enter Price: "))
+    stock = int(input("Enter Stock: "))
+
+    query = """
+    INSERT INTO products(product_name,price,stock)
+    VALUES(%s,%s,%s)
+    """
+
+    cursor.execute(query,(name,price,stock))
+    conn.commit()
+
+    print("Product Added Successfully")
     
 # ---------------- VIEW PRODUCTS ----------------
 
@@ -325,14 +343,18 @@ while True:
 
             print("\n----- ADMIN MENU -----")
             print("1 View Products")
-            print("2 LOGOUT")
+            print("2 Add Product")
+            print("3 LOGOUT")
             ch=input("Enter choice:")
             if ch == "1":
                 view_products()
                 
-            elif ch == "2":
+            if ch == "2":
+                add_product()
+                
+            elif ch == "3":
                 break
     elif choice == "4":
-        print("Thank You")
+        print("Thank You for visting our shop")
         break
  
