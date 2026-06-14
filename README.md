@@ -83,6 +83,9 @@ python main.py
 ### Login
 ![Login](Project screenshots/Login.png)
 
+ ### Admin Panel
+![Admin panel](Project screenshots/Admin_Panel.png)
+
 ### View Products
 ![View Products](Project screenshots/View_Products.png)
 
