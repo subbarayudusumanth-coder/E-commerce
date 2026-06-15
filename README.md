@@ -10,6 +10,7 @@ Online Shopping System is a console-based e-commerce application developed using
 | User Login | Authenticates users using username and password |
 | Admin Login | Authenticates admin using secure credentials |
 | Add Product | Admin can add new products to inventory |
+| View Product | Admin can view all products to inventory |
 | View Products | Displays all available products |
 | Search Products | Enables users to search products by name |
 | Add to Cart | Adds selected products to the shopping cart |
