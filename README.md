@@ -87,6 +87,9 @@ python main.py
  ### Admin Panel
 ![Admin panel](Project screenshots/Admin_Panel.png)
 
+### Add Product
+![Add Product](Project screenshots/Add_Product.png)
+
 ### View Products
 ![View Products](Project screenshots/View_Products.png)
 
